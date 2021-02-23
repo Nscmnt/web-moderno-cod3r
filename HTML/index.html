@@ -1,0 +1,61 @@
+<!-- HTML é uma linguagem de marcação, utilizado para estruturar a pagina utilizando tags, apartir do html5 utiliza se muito de semantica no html-->
+
+<!DOCTYPE html> 
+<html lang="pt-br"> <!-- Abertura e fechamento do documento é feito pela TAG html-->
+<head> 
+  <!-- Tag head utilizado principalmente para meta dados e  informações que são passadas para o navegador como abaixo o conjunto de caracteres, caracteristicas do conteudo, informações que ajudam na renderização da pagina, etc.-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" href="./styles/reset.css">  
+  <link rel="stylesheet" href="./styles/header.css">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/footer.css">
+  <link rel="stylesheet" href="./styles/style-study.css">
+  <link rel="stylesheet" href="./styles/style-list.css">
+
+  <link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+  <title>HTML</title>
+</head>
+<body>
+  <!-- Principais tagś semântica do HTML5 -->
+  <header>
+    <!-- Utilizado para definir cabeçalho -->
+    <h1>HTML</h1>
+    <nav>
+      <!-- Utilizando para definir conteúdo como menus, navegação -->
+      <ul class="menu">
+        <li><a class="page" href="./pages/textos.html">Textos</a></li>
+        <li><a class="page" href="./pages/listas.html">Listas</a></li>
+        <li><a class="page" href="./pages/teste.html">Pagina teste</a></li>
+        <li><a class="page" href="./pages/teste.html">Pagina teste</a></li>
+        <li><a class="page" href="./pages/teste.html">Pagina teste</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <!-- Defini conteudo principal da pagina ou também pode definir conteudo principal dentro de um secção, assim como as outras tag pode não so definir com relação a pagina mas também com relação a um componente -->
+    <p class ="info"> Utilize o menu para obter informações sobre assuntos do estudo de  HTML</p>
+    <aside>
+      <!-- Conteudos corelacionados, pode ser utilizado na lateral por exemplo -->
+    </aside>
+  </main>
+
+  <section>
+    <!-- Seções dentro de uma pagina -->
+  </section>
+
+  <footer>
+    <!-- Utilizado para definir rodapes -->
+
+    Developed by Jorge Nascimento
+  </footer>
+  
+  <script src="./main.js"></script>
+</body>
+</html>

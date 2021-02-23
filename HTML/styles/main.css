@@ -1,0 +1,22 @@
+main{
+  width: 90%;
+  height: 70vh;
+
+  border: solid 3px teal;
+  border-radius: 10px;
+
+  margin: 20px auto;
+  padding: 20px;
+
+  color: black;
+}
+
+p.info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.2rem;
+
+  color: rgba(126, 126, 122, 0.897);
+}

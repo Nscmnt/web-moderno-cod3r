@@ -5,3 +5,16 @@
 .container .lista{
   margin: 15px;
 }
+
+.tree li{
+  cursor: pointer;
+}
+
+.tree ul{
+  display: none;
+}
+
+.tree  .toggle-itens{  
+  display: block;  
+}
+

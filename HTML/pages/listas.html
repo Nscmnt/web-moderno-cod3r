@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Listas</title>
-  </head>
-  <body>
+
     <h1 class="titulo-estudos">Utilizando listas no documento html</h1>
     
     <p>Listas Ordenadas - <cite>pode ser classificada por números, algarismos romanos, ordem alfabetica. enquanto a não ordenado possui apenas um simbolo, é possi criar lista dentro de listas</cite></p>
@@ -27,36 +19,32 @@
       </ul>
 
       <ul class="tree">
-        <li>Jogos
-          <ul>
-            <li>God Of War</li>
-            <li>Need For Speed</li>
-          </ul>
-        </li>
-      
-      <li>Filmes
-        <ul>
+
+        <li data-itens>Jogos</li>
+        <ul class="toggle-itens">
+          <li>God Of War</li>
+          <li>Need For Speed</li>
+        </ul>
+
+        <li data-itens>Filmes</li>
+        <ul class="toggle-itens">
           <li>Matrix</li>
           <li>Vingadores</li>
         </ul>
-      </li>
 
-      <li>Comidas
-        <ul>
+        <li data-itens>Comidas </li>
+        <ul class="toggle-itens">
           <li>Lasanha</li>
           <li>Cucuz</li>
         </ul>
-      </li>
 
-      <li>Profissões
-        <ul>
+        <li data-itens>Profissões </li>
+        <ul class="toggle-itens">
           <li>Desenvolvedor</li>
           <li>Ui Desgner</li>
         </ul>
-      </li>
 
-    </ul>
-      
+      </ul>     
 
     </div>
     
@@ -66,5 +54,16 @@
     <a href="https://www.w3schools.com/html/default.asp" target="_blank">
       <strong>w3schools</strong></a
     >
-  </body>
-</html>
+
+    <script>
+      const lista = document.querySelectorAll('[data-itens]')
+
+      lista.forEach((e) =>{
+        e.addEventListener('click', () => {
+          const child = e.nextElementSibling
+          child.classList.toggle('toggle-itens')
+          
+        } )
+      })
+    </script>
+

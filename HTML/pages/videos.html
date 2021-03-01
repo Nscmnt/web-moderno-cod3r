@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="../styles/style-video.css">
+
+<h1 class="titulo-estudos">Insrindo video no documento</h1>
+<p>Utilizando a tag <code>video</code> pode inserir videos em formados diferentes, podendo ser video local ou de outro servidor como o youtube</p>
+<p> Com metodos ja existente na tag video é possivel criar botões personalizados assim como outro componentes</p>
+
+  <div id="videoPlay">
+
+    <video id="meuvideo" controls>
+
+      <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+        Seu browser não suporta video
+  
+    </video>
+  
+    <div>
+      <button data-play="meuVideo">Play</button>
+      <button data-pause="meuVideo">Pause</button>
+      <button data-stop="meuVideo">Stop</button>
+    </div>
+
+  </div>
+  
+
+  <div data-progress="meuVideo" class="progresso">
+    <div></div>
+  </div>
+
+  
+
+
+<script>
+let video = document.querySelector('video')
+
+function play(){
+  video.play()
+}
+
+function pause(){
+  video.pause()   
+}
+
+function stop(){
+  video.pause()
+  video.currentTime = 0;
+}
+
+
+function getPercent(){
+  const fullTime = video.duration
+  let current = video.currentTime
+  
+
+  return current / fullTime * 100;  
+}
+
+const progressBar = document.querySelector('[data-progress] > div')
+
+setInterval(() => {
+  let percent = getPercent()
+  progressBar.style.width = ` ${percent}%` 
+  progressBar.innerHTML = `${percent.toFixed(1)}%`
+}, 100)
+
+document.querySelector('[data-play]').addEventListener('click', play)
+document.querySelector('[data-pause]').addEventListener('click', pause)
+document.querySelector('[data-stop]').addEventListener('click', stop)
+
+</script>

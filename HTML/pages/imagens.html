@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="../styles/style-images.css">
+<h1 class="titulo-estudos">Inserindo imagens no documento</h1>
+
+<p style="text-align: center;"> Imagens são inseridas atraves da Tag <code>img</code> onde ser define o <code>src</code> que é o caminho de onde a imagem sera carregada.</p>
+
+<main class="content-image">
+
+  <div class="slide-show">
+
+      <div class="image selected">
+        <img src="img/image01.jpg">
+      </div>
+
+      <div class="image" >
+        <img src="img/image02.jpg">
+      </div>
+
+      <div class="image">
+        <img src="img/image03.jpg">
+      </div>
+
+      <div class="image">
+        <img src="img/image04.jpg">
+      </div>
+
+      <div class="image">
+        <img src="img/image05.jpg">
+      </div>
+
+      <div class="image">
+        <img src="img/image06.jpg">
+      </div>
+
+      <div class="image">
+        <img src="./image07.jpg">
+      </div>
+
+      <div class="image">
+        <img src="./image08.jpg">
+      </div>
+
+    <div id="back"></div>
+
+    <div id="next"></div>
+    
+  </div>
+
+</main>
+
+<script>
+  const back = document.getElementById('back')
+  const slides = document.querySelectorAll('.image')
+
+  let max = slides.length;
+
+  let contador = 0;
+
+  back.onclick = () => {
+    slides.forEach((slide) => slide.classList.remove('selected') )
+
+    console.log(contador)
+
+    contador = contador - 1
+    if(contador >= max || contador < 0) contador = 0;   
+ 
+    slides[contador].classList.add('selected')
+
+    console.log(contador)
+  }
+
+  const next = document.getElementById('next')
+  
+  next.onclick = () => {    
+    slides.forEach((slide) => slide.classList.remove('selected') )
+
+    contador++
+    if(contador >= max || contador < 0) contador = 0;   
+    
+    
+    slides[contador].classList.add('selected')
+    
+  }
+
+  window.onload = setInterval(() =>{
+
+    if(contador >= max || contador < 0){
+      slides.forEach((slide) => slide.classList.remove('selected') )
+      contador = 0;
+    }   
+    
+    console.log(contador)
+    slides[contador].classList.add('selected');   
+    contador++
+    
+  }, 4000)
+</script>

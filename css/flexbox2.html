@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox #02</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+
+        body{
+            margin: 0;
+        }
+        .flex-container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+        }
+        .flex-container div{
+            flex-grow: 1; /* define como swra distribuido o tamanho restabte do container*/
+        }
+
+        .flex-container div:nth-child(1){
+            order: 2; /* Define o peso de rederização do elemento com relação a ordem no html*/
+            flex-grow: 3;
+            flex-shrink: 10;  /* Define o fator de encolhimento do elemento */
+            align-self: center; /* define o alinhamento de um flex itens especifico*/
+            background-color: coral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container tag nolabel">
+        <div class="tag nolabel">1</div>
+        <div class="tag nolabel">2</div>
+        <div class="tag nolabel">3</div>
+        <div class="tag nolabel">4</div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

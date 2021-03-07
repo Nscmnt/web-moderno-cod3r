@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox #03</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        .flex-container{
+            
+            display: flex;
+
+            /* flex-direction: column; */
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between; /*Alinhamento do conteudo no eixo principal*/
+        }
+
+        .flex-container > div{
+            width: 150px;
+    
+        }
+
+        .flex-container :nth-child(2){
+
+            align-self: flex-end; /* Alihamento de um itens especifico no eixo cross*/
+           
+            background-color: cyan;
+        }
+
+        .flex-container div{
+            flex-basis: 100px; /* define a largura dos itens base  no sentido do( main eixo )*/
+        }
+
+        .flex-container div:nth-child(4){
+            /* grow srink basis*/
+            flex: 1 2; /* forma abreviado de inserir os valores*/
+
+            background-color: darkgoldenrod;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container tag nolabel">
+        <div class="tag nolabel">1</div>
+        <div class="tag nolabel">2</div>
+        <div class="tag nolabel">3</div>
+        <div class="tag nolabel">4</div>
+        <div class="tag nolabel">5</div>
+        <div class="tag nolabel">6</div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Fetch API #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Estados</h1>
+
+    <script>
+        fetch('./dados/estados.json').then( resolve => resolve.text()).then( estados => {
+            const estadosArray = JSON.parse(estados)
+            const body = document.querySelector('body')
+            let itens = ''
+            estadosArray.forEach(estado => {                
+                itens += `<li> ${estado.id} - ${estado.nome} - ${estado.sigla}</li>`
+            });
+
+            body.innerHTML = ` <ul> ${itens}</ul>` 
+        })
+        .catch(e => console.log('Ocorreu um erro' + e))
+    </script>
+</body>

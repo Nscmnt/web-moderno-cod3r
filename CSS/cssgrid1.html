@@ -15,12 +15,43 @@
         }
         
         div {
-            display: grid;
-            align-items: center;
+            display: flex;
             justify-content: center;
+            align-items: center;
             font-size: 30px;
             border: solid 5px dodgerblue;
             background: #fff;
+        }
+
+        body{
+            display: grid;
+            grid-template-columns: repeat(4, 200px);
+            grid-template-rows: repeat(5, 1fr);
+
+            column-gap: 10px;
+            row-gap: 25px;
+            gap: 30px; /* espaço em todos os sentidos*/
+        }
+
+        /* .d9, .d10, .d11, .d12{
+           grid-row-start: 3;
+           grid-row-end: 6;
+        }  */
+
+        /* .d9{
+            grid-column-start: 1;
+            grid-column-end: 2;
+        } */
+        .d8{
+            /* grid-column: 2 / 7; /* grid-colums star e and*/
+            /* grid-row: 2 / 4;  */
+            grid-area: 2 / 2 / 4 / 5; /* row-star / column star / row-end / column-end*/
+            
+            
+        }
+
+        .d12{
+            grid-area: 5 / 1 / 6 / 5 ;
         }
     </style>
 </head>

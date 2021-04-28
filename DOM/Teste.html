@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+  <style>
+    .teste {
+      width: 100px;
+      height: 100px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      
+
+      margin: 0 auto;
+      transition: all 2s;
+      margin-top: 100px;
+     
+      background-color: chocolate;
+    }
+
+    .pulse{
+      animation-name: pulseAnimation;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      /* animation-delay: 1s; */
+    }
+
+    @keyframes pulseAnimation {
+      1% {
+        margin-top: 100px;
+      }
+      50% {
+        margin-top: 120px;
+      }
+      100% {
+        margin-top: 100px;
+      }
+    }
+    
+    
+  </style>
+</head>
+<body style="height: 1500px;">
+  <div class="teste pulse">
+  </div>
+
+  <script>
+    const e = document.querySelector('.teste')
+    
+
+    function pulse(){
+
+    }
+
+    
+    setInterval(pulse, 300)
+    
+      
+  </script>
+</body>
+</html>

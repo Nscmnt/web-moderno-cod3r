@@ -57,7 +57,6 @@ gulp.task("appCSS", () => {
     .pipe(concat("app.min.css"))
     .pipe(gulp.dest("build/assets/css"));
 });
-
 gulp.task("appJS", () => {
   return gulp
     .src("src/assets/js/**/*.js")

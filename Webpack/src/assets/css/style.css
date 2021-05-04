@@ -1,0 +1,9 @@
+body {
+  background-color: teal;
+  background-image: url("../imgs/image02.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-clip: border-box;
+  height: 100vh;
+}

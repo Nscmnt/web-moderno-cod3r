@@ -1,0 +1,8 @@
+$cor-principal-botao: rgb(91, 100, 224);
+$cor-default-font: #000;
+
+.botao {
+  color: $cor-default-font;
+  background-color: $cor-principal-botao;
+  font-size: 1.8rem;
+}
